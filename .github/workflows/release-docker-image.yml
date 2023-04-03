@@ -31,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ericswpark/caddy-docker:latest
+          tags: ghcr.io/ericswpark/caddy-docker:latest
