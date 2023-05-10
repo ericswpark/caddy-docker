@@ -17,6 +17,7 @@ COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 # Install Fail2ban
 RUN apk add fail2ban openrc
+RUN rc-update add fail2ban
 
 # Copy fail2ban configuration files
 COPY fail2ban/caddy-4xx.conf /etc/fail2ban/filter.d/caddy-4xx.conf
