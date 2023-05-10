@@ -14,3 +14,10 @@ FROM caddy:alpine
 
 # Copy executable from builder
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+# Install Fail2ban
+RUN apk add fail2ban
+
+# Copy and run entrypoint
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
