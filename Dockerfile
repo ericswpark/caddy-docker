@@ -24,4 +24,5 @@ COPY fail2ban/jail.local /etc/fail2ban/jail.local
 
 # Copy and run entrypoint
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod a+x /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
