@@ -3,11 +3,9 @@ Caddy2 Docker image with several goodies built-in
 
 ## Included
 
-- Fail2ban
-- Caddy modules
-    - [Cloudflare DNS module](https://github.com/caddy-dns/cloudflare)
-    - [Transform Encoder module for Logger](https://github.com/caddyserver/transform-encoder)
-    - [Coraza WAF Caddy Module](https://github.com/corazawaf/coraza-caddy)
+- [Cloudflare DNS module](https://github.com/caddy-dns/cloudflare)
+- [Transform Encoder module for Logger](https://github.com/caddyserver/transform-encoder)
+- [Coraza WAF Caddy Module](https://github.com/corazawaf/coraza-caddy)
 
 # Setup
 
@@ -22,7 +20,9 @@ log {
 }
 ```
 
-This transforms the logs into a format that Fail2ban can understand, and places them in a log path that Fail2ban monitors. No further configuration is required on your part to use Fail2ban.
+This transforms the logs into a format that Fail2ban can understand.
+
+You will need to supply your own Fail2ban install, outside of Docker.
 
 ## Coraza setup
 
